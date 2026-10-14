@@ -1,10 +1,14 @@
 import java.util.Scanner;
 import java.io.FileNotFoundException;
 import java.io.File;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+
+
 
 
 public class GeradorContrato{
-public static void main(String[] args) throws FileNotFoundException {
+public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
     
 
     Scanner entrada = new Scanner(new File("../template/template.txt"), "UTF-8");
@@ -78,7 +82,13 @@ public static void main(String[] args) throws FileNotFoundException {
         teclado.close();
 
         System.out.println("\nCONTRATO PREENCHIDO!\n");
-        System.out.println(contrato);
+        PrintWriter escritor = new PrintWriter("../saida/contrato_preenchido.txt", "UTF-8");
+        escritor.println(contrato);
+        escritor.close();
+        System.out.println("Contrato salvo em saida/contrato_preenchido.txt");
+        
+
+
 
 
 
