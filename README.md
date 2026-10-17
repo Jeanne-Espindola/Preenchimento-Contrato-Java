@@ -13,11 +13,10 @@ O projeto tem como finalidade automatizar e agilizar o preenchimento de contrato
 O preenchimento manual de contratos é um processo lento e sujeito a falhas. A motivação para criar este projeto nasceu da necessidade de ajudar um familiar que perdia muito tempo com essa tarefa e frequentemente lidava com erros de digitação nas informações dos envolvidos.
 
 ## Funcionalidades
-* Formulário para inserir os dados dos indivíduos
-
-*  Substituição automática dos campos no template
-
-* Geração de contrato em .docx
+* Entrada de dados pelo terminal: o programa pergunta cada campo do contrato (nomes, CPF, RG, endereços, cláusulas, data de assinatura)
+* Substituição automática dos campos no template em .docx
+* Geração do contrato preenchido em .docx, pronto para abrir no Word
+* Tratamento de caracteres especiais (como & < >) para não corromper o documento
 
 ## Tecnologias
 * **Java 21** (OpenJDK Temurin 21.0.12)
@@ -32,6 +31,10 @@ O preenchimento manual de contratos é um processo lento e sujeito a falhas. A m
 • Suporte para qualquer tipo de contrato
 
 • Banco de dados 
+
+• Site para preenchimento
+
+
 
 ---
 
