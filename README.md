@@ -22,6 +22,7 @@ O preenchimento manual de contratos é um processo lento e sujeito a falhas. A m
 ## Tecnologias
 * **Java 21** (OpenJDK Temurin 21.0.12)
 * **IDE:** VS Code
+* **IA:** Claude (Anthropic), usado como apoio no desenvolvimento
 
 
 ## Melhorias Futuras
