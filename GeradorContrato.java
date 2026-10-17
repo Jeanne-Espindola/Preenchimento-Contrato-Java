@@ -1,25 +1,27 @@
+import java.util.Enumeration;
 import java.util.Scanner;
-import java.io.FileNotFoundException;
-import java.io.File;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
-
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
+import java.util.zip.ZipOutputStream;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 
 
 
 public class GeradorContrato{
-public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
+    public static void main(String[] args) throws IOException {
+
     
-
-    Scanner entrada = new Scanner(new File("../template/template.txt"), "UTF-8");
     Scanner teclado = new Scanner(System.in);
-    String contrato = "";
+    ZipFile zip = new ZipFile("../template/template_contrato_prestacao_servicos.docx");
+    ZipEntry entradaXml = zip.getEntry("word/document.xml");
+    InputStream fluxo = zip.getInputStream(entradaXml);
+    String contrato = new String(fluxo.readAllBytes(), StandardCharsets.UTF_8);
+    fluxo.close();
 
-    while(entrada.hasNextLine()){
-        String linha = entrada.nextLine();
-        contrato = contrato + linha + "\n";
-        
-    }
+    
 
         System.out.print("Nome do contratante: ");
         contrato = contrato.replace("{{CONTRATANTE_NOME}}", teclado.nextLine());
@@ -81,17 +83,25 @@ public static void main(String[] args) throws FileNotFoundException, Unsupported
 
         teclado.close();
 
-        System.out.println("\nCONTRATO PREENCHIDO!\n");
-        PrintWriter escritor = new PrintWriter("../saida/contrato_preenchido.txt", "UTF-8");
-        escritor.println(contrato);
-        escritor.close();
-        System.out.println("Contrato salvo em saida/contrato_preenchido.txt");
-        
+    ZipOutputStream saida = new ZipOutputStream(new FileOutputStream("../saida/contrato_preenchido.docx"));
+    Enumeration<? extends ZipEntry> entradas = zip.entries();
+    while (entradas.hasMoreElements()) {
+        ZipEntry entrada = entradas.nextElement();
+        saida.putNextEntry(new ZipEntry(entrada.getName()));
 
+        if (entrada.getName().equals("word/document.xml")) {
+            saida.write(contrato.getBytes(StandardCharsets.UTF_8));
+        } else {
+            InputStream original = zip.getInputStream(entrada);
+            saida.write(original.readAllBytes());
+            original.close();
+        }
+        saida.closeEntry();
+    }
+    saida.close();
+    zip.close();
 
+    System.out.println("Contrato salvo em saida/contrato_preenchido.docx");
 
-
-
-
-    entrada.close();
-}}
+}
+}
