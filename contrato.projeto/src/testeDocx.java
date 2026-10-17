@@ -11,16 +11,16 @@ public class testeDocx {
     public static void main(String[] args) throws IOException {
         ZipFile zip = new ZipFile("../template/template_contrato_prestacao_servicos.docx");
 
-        // 1. Ler o texto do contrato (document.xml)
+        
         ZipEntry entradaXml = zip.getEntry("word/document.xml");
         InputStream fluxo = zip.getInputStream(entradaXml);
         String xml = new String(fluxo.readAllBytes(), StandardCharsets.UTF_8);
         fluxo.close();
 
-        // 2. Trocar um campo
+       
         xml = xml.replace("{{CONTRATANTE_NOME}}", "Maria Souza");
 
-        // 3. Montar o novo .docx, copiando os arquivos da caixa original
+        
         ZipOutputStream saida = new ZipOutputStream(new FileOutputStream("../saida/teste.docx"));
         Enumeration<? extends ZipEntry> entradas = zip.entries();
         while (entradas.hasMoreElements()) {

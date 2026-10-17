@@ -1,0 +1,44 @@
+INSTRUMENTO PARTICULAR DE CONTRATO DE PRESTAÇÃO DE SERVIÇOS, REGIDO PELO CÓDIGO CIVIL BRASILEIRO, QUE ENTRE SI CELEBRAM AS PARTES ABAIXO QUALIFICADAS.
+As partes abaixo nomeadas e qualificadas, a saber:
+{{CONTRATANTE_NOME}}, inscrito(a) no CPF/MF sob o nº {{CONTRATANTE_CPF}} e portador(a) da carteira de identidade nº {{CONTRATANTE_RG}}, residente e domiciliado(a) em {{CONTRATANTE_ENDERECO}}, {{CONTRATANTE_CIDADE}}, Estado de {{CONTRATANTE_ESTADO}}, doravante denominado(a) simplesmente CONTRATANTE; e
+{{CONTRATADO_NOME}}, inscrito(a) no CPF/MF sob o nº {{CONTRATADO_CPF}} e portador(a) da carteira de identidade nº {{CONTRATADO_RG}}, residente e domiciliado(a) em {{CONTRATADO_ENDERECO}}, {{CONTRATADO_CIDADE}}, Estado de {{CONTRATADO_ESTADO}}, doravante denominado(a) simplesmente CONTRATADO.
+As partes acima identificadas têm entre si justas e acertadas a celebração do presente contrato de prestação de serviços, que se regerá pelas cláusulas seguintes e pelas condições nelas estabelecidas, as quais livre e mutuamente estipulam, outorgam e aceitam, obrigando-se reciprocamente a cumpri-las e fazê-las respeitar, por si ou por seus herdeiros e sucessores, nos termos do Código Civil Brasileiro.
+CLÁUSULA PRIMEIRA: DO OBJETO
+O presente instrumento tem como objeto a prestação, pelo CONTRATADO ao CONTRATANTE, dos seguintes serviços: {{DESCRICAO_SERVICO}}.
+CLÁUSULA SEGUNDA: DO PRAZO
+Os serviços serão executados no período compreendido entre {{DATA_INICIO}} e {{DATA_TERMINO}}, podendo o prazo ser prorrogado mediante acordo das partes, formalizado por escrito.
+CLÁUSULA TERCEIRA: DO VALOR E DA FORMA DE PAGAMENTO
+Pela prestação dos serviços, o CONTRATANTE pagará ao CONTRATADO o valor total de R$ {{VALOR_TOTAL}} ({{VALOR_EXTENSO}}), mediante {{FORMA_PAGAMENTO}}.
+Parágrafo único. O atraso no pagamento sujeitará o CONTRATANTE às penalidades previstas em lei e às que as partes ajustarem por escrito.
+CLÁUSULA QUARTA: DAS OBRIGAÇÕES DO CONTRATADO
+I – executar os serviços com zelo, qualidade e dentro do prazo estabelecido;
+II – comunicar ao CONTRATANTE, de imediato, qualquer fato que possa comprometer a execução dos serviços;
+III – responder pelos danos que causar ao CONTRATANTE ou a terceiros em decorrência de dolo ou culpa na execução dos serviços;
+IV – cumprir todas as demais cláusulas deste contrato.
+CLÁUSULA QUINTA: DAS OBRIGAÇÕES DO CONTRATANTE
+I – fornecer ao CONTRATADO as informações e os meios necessários à execução dos serviços;
+II – efetuar o pagamento nas condições e nos prazos acordados;
+III – comunicar ao CONTRATADO, por escrito, qualquer alteração que deseje no escopo dos serviços;
+IV – cumprir todas as demais cláusulas deste contrato.
+CLÁUSULA SEXTA: DA CONFIDENCIALIDADE
+As partes se obrigam a manter sigilo sobre as informações a que tiverem acesso em razão deste contrato, não podendo divulgá-las a terceiros sem a autorização prévia e por escrito da outra parte.
+CLÁUSULA SÉTIMA: DA RESCISÃO
+Este contrato poderá ser rescindido por qualquer das partes, mediante aviso prévio por escrito com antecedência mínima de {{AVISO_PREVIO_DIAS}} dias, ou imediatamente, em caso de descumprimento de qualquer de suas cláusulas pela outra parte.
+CLÁUSULA OITAVA: DAS CLÁUSULAS ADICIONAIS
+{{CLAUSULAS_ADICIONAIS}}
+CLÁUSULA NONA: DO FORO
+As partes elegem o foro da cidade de {{FORO_CIDADE}}, Estado de {{FORO_ESTADO}}, para dirimir quaisquer dúvidas ou questões advindas deste contrato, com renúncia a qualquer outro, por mais especial que seja. E, por estarem justas e contratadas, assinam o presente instrumento em {{NUMERO_VIAS}} via(s), na presença de duas testemunhas, que a tudo acompanharam e que também assinam ao final.
+{{LOCAL_ASSINATURA}}, {{DATA_ASSINATURA}}
+______________________________________________
+{{CONTRATANTE_NOME}}
+CPF/MF nº {{CONTRATANTE_CPF}}
+______________________________________________
+{{CONTRATADO_NOME}}
+CPF/MF nº {{CONTRATADO_CPF}}
+TESTEMUNHAS:
+______________________________________________
+Nome:
+CPF:
+______________________________________________
+Nome:
+CPF:
