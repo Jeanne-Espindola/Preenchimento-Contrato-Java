@@ -2,7 +2,7 @@
 
 [![GIT](https://img.shields.io/badge/GIT-F05032?style=for-the-badge&logo=git&logoColor=white)](#)
 [![GITHUB](https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white)](#)
-[![STATUS](https://img.shields.io/badge/STATUS-EM%20DESENVOLVIMENTO-yellow?style=for-the-badge)](#)
+[![STATUS](https://img.shields.io/badge/STATUS-CONCLU%C3%8DDO-green?style=for-the-badge)](#)
 [![LICENSE](https://img.shields.io/badge/LICENSE-MIT-green?style=for-the-badge)](#)
 
 
