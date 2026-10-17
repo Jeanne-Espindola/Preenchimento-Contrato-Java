@@ -11,6 +11,11 @@ import java.nio.charset.StandardCharsets;
 
 
 public class GeradorContrato{
+
+
+    public static String escapar(String texto) {
+    return texto.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;");
+    }
     public static void main(String[] args) throws IOException {
 
     
@@ -24,62 +29,64 @@ public class GeradorContrato{
     
 
         System.out.print("Nome do contratante: ");
-        contrato = contrato.replace("{{CONTRATANTE_NOME}}", teclado.nextLine());
+        contrato = contrato.replace("{{CONTRATANTE_NOME}}", escapar(teclado.nextLine()));
         System.out.print("CPF do contratante: ");
-        contrato = contrato.replace("{{CONTRATANTE_CPF}}", teclado.nextLine());
+        contrato = contrato.replace("{{CONTRATANTE_CPF}}", escapar(teclado.nextLine()));
         System.out.print("RG do contratante: ");
-        contrato = contrato.replace("{{CONTRATANTE_RG}}", teclado.nextLine());
+        contrato = contrato.replace("{{CONTRATANTE_RG}}", escapar(teclado.nextLine()));
         System.out.print("Endereco do contratante: ");
-        contrato = contrato.replace("{{CONTRATANTE_ENDERECO}}", teclado.nextLine());
+        contrato = contrato.replace("{{CONTRATANTE_ENDERECO}}", escapar(teclado.nextLine()));
         System.out.print("Cidade do contratante: ");
-        contrato = contrato.replace("{{CONTRATANTE_CIDADE}}", teclado.nextLine());
+        contrato = contrato.replace("{{CONTRATANTE_CIDADE}}", escapar(teclado.nextLine()));
         System.out.print("Estado do contratante: ");
-        contrato = contrato.replace("{{CONTRATANTE_ESTADO}}", teclado.nextLine());
+        contrato = contrato.replace("{{CONTRATANTE_ESTADO}}", escapar(teclado.nextLine()));
 
 
+
+        
 
 
         System.out.print("Nome do contratado: ");
-        contrato = contrato.replace("{{CONTRATADO_NOME}}", teclado.nextLine());
+        contrato = contrato.replace("{{CONTRATADO_NOME}}", escapar(teclado.nextLine()));
         System.out.print("CPF do contratado: ");
-        contrato = contrato.replace("{{CONTRATADO_CPF}}", teclado.nextLine());
+        contrato = contrato.replace("{{CONTRATADO_CPF}}", escapar(teclado.nextLine()));
         System.out.print("RG do contratado: ");
-        contrato = contrato.replace("{{CONTRATADO_RG}}", teclado.nextLine());
+        contrato = contrato.replace("{{CONTRATADO_RG}}", escapar(teclado.nextLine()));
         System.out.print("Endereco do contratado: ");
-        contrato = contrato.replace("{{CONTRATADO_ENDERECO}}", teclado.nextLine());
+        contrato = contrato.replace("{{CONTRATADO_ENDERECO}}", escapar(teclado.nextLine()));
         System.out.print("Cidade do contratado: ");
-        contrato = contrato.replace("{{CONTRATADO_CIDADE}}", teclado.nextLine());
+        contrato = contrato.replace("{{CONTRATADO_CIDADE}}", escapar(teclado.nextLine()));
         System.out.print("Estado do contratado: ");
-        contrato = contrato.replace("{{CONTRATADO_ESTADO}}", teclado.nextLine());
+        contrato = contrato.replace("{{CONTRATADO_ESTADO}}", escapar(teclado.nextLine()));
 
         
         System.out.print("Descricao do servico: ");
-        contrato = contrato.replace("{{DESCRICAO_SERVICO}}", teclado.nextLine());
+        contrato = contrato.replace("{{DESCRICAO_SERVICO}}", escapar(teclado.nextLine()));
         System.out.print("Data de inicio: ");
-        contrato = contrato.replace("{{DATA_INICIO}}", teclado.nextLine());
+        contrato = contrato.replace("{{DATA_INICIO}}", escapar(teclado.nextLine()));
         System.out.print("Data de termino: ");
-        contrato = contrato.replace("{{DATA_TERMINO}}", teclado.nextLine());
+        contrato = contrato.replace("{{DATA_TERMINO}}", escapar(teclado.nextLine()));
         System.out.print("Valor total (so o numero): ");
-        contrato = contrato.replace("{{VALOR_TOTAL}}", teclado.nextLine());
+        contrato = contrato.replace("{{VALOR_TOTAL}}", escapar(teclado.nextLine()));
         System.out.print("Valor por extenso: ");
-        contrato = contrato.replace("{{VALOR_EXTENSO}}", teclado.nextLine());
+        contrato = contrato.replace("{{VALOR_EXTENSO}}", escapar(teclado.nextLine()));
         System.out.print("Forma de pagamento: ");
-        contrato = contrato.replace("{{FORMA_PAGAMENTO}}", teclado.nextLine());
+        contrato = contrato.replace("{{FORMA_PAGAMENTO}}", escapar(teclado.nextLine()));
         System.out.print("Aviso previo (em dias): ");
-        contrato = contrato.replace("{{AVISO_PREVIO_DIAS}}", teclado.nextLine());
+        contrato = contrato.replace("{{AVISO_PREVIO_DIAS}}", escapar(teclado.nextLine()));
 
         System.out.print("Clausulas adicionais: ");
-        contrato = contrato.replace("{{CLAUSULAS_ADICIONAIS}}", teclado.nextLine());
+        contrato = contrato.replace("{{CLAUSULAS_ADICIONAIS}}", escapar(teclado.nextLine()));
         System.out.print("Cidade do foro: ");
-        contrato = contrato.replace("{{FORO_CIDADE}}", teclado.nextLine());
+        contrato = contrato.replace("{{FORO_CIDADE}}", escapar(teclado.nextLine()));
         System.out.print("Estado do foro: ");
-        contrato = contrato.replace("{{FORO_ESTADO}}", teclado.nextLine());
+        contrato = contrato.replace("{{FORO_ESTADO}}", escapar(teclado.nextLine()));
         System.out.print("Numero de vias: ");
-        contrato = contrato.replace("{{NUMERO_VIAS}}", teclado.nextLine());
+        contrato = contrato.replace("{{NUMERO_VIAS}}", escapar(teclado.nextLine()));
         System.out.print("Local da assinatura: ");
-        contrato = contrato.replace("{{LOCAL_ASSINATURA}}", teclado.nextLine());
+        contrato = contrato.replace("{{LOCAL_ASSINATURA}}", escapar(teclado.nextLine()));
         System.out.print("Data da assinatura: ");
-        contrato = contrato.replace("{{DATA_ASSINATURA}}", teclado.nextLine());
+        contrato = contrato.replace("{{DATA_ASSINATURA}}", escapar(teclado.nextLine()));
 
         teclado.close();
 
